@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int board[3][3]={
+    {1,2,3},
+    {4,5,6},
+    {0,7,8}, //0 bos kutucuk
+};
+
+//tahtayi yazdirma
+void printBoard(){
+    printf("+---+---+---+\n");
+    for(int i=0; i<3; i++){  //satir kontrolu
+        for(int j=0; j<3; j++){ //sutun kontrolu
+         printf("|");
+            if(board[i][j]==0) //0 rakamini bosluk olarak belirledik
+              printf("   ");   //bosluk yerine bos bas
+            else                
+              printf(" %d ",board[i][j]); //bosluk yoksa sayilari yazdir
+        }
+         printf("|");
+         printf("\n");
+         printf("+---+---+---+\n");
+    }
+    printf("\n");
+}
+
+int main(){  
+    printBoard();
+    return 0;
+}
