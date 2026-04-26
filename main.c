@@ -87,7 +87,7 @@ int move(int tahta[3][3], char yon) {
     }
 }
 
-// 4. ??z?ld? m?? (isSolved)
+// 4. cozuldu mu (isSolved)
 int isSolved(int tahta[3][3]) {
     int expectedValue = 1;
     int i, j;
